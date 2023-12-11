@@ -8,8 +8,8 @@ export class Router {
   togglePage() {
     const { pathname } = window.location;
     const captureRoute = this.routes[pathname] || this.routes[404];
+    console.log(captureRoute)
     if(!captureRoute) {
-        console.log(captureRoute)
       return;
     }
 

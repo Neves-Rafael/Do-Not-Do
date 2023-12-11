@@ -12,10 +12,11 @@ const activeRout = document.querySelectorAll("nav a");
 activeRout.forEach((element) => {
   element.addEventListener("click", (event) => {
     event.preventDefault();
+    window.history.pushState({}, "", event.target.href);
+    router.togglePage();
   });
 });
 
-router.togglePage();
 
 window.onpopstate = () => {
     router.togglePage();
