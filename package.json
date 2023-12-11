@@ -1,0 +1,12 @@
+{
+  "name": "do-not-do",
+  "version": "1.0.0",
+  "description": "Todo app",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "Rafael Neves",
+  "license": "MIT"
+}
