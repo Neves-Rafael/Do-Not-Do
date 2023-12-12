@@ -1,10 +1,18 @@
 import { UserRegister } from "./login/UserRegister.js";
-import { Content } from "./home/Content.js";
+import { TaskView } from "./tasks/UpdateTasks.js";
 const userRegister = new UserRegister();
-const content = new Content();
+const taskView = new TaskView();
 
 export class Router {
   routes = {};
+
+  verifyRoute() {
+    if (window.location.pathname === "/" && localStorage.getItem("login")) {
+      window.history.pushState({}, "", "/home");
+      this.routes["/home"] = "./src/pages/home.html";
+      this.togglePage();
+    }
+  }
 
   add(pathName, page) {
     this.routes[pathName] = page;
@@ -20,8 +28,8 @@ export class Router {
       .then((html) => {
         document.querySelector(".app").innerHTML = html;
         userRegister.inputs();
-        content.user();
-        userRegister.verifyLogin();
+        userRegister.loginPage();
+        taskView.add();
       });
   }
 }

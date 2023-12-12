@@ -1,10 +1,3 @@
-export class Content {
-    user() {
-        let userName = document.querySelector(".user");
-        if(!userName){
-            return;
-        }
+class Content {
 
-        userName.innerHTML = localStorage.getItem("user");
-    }
 }

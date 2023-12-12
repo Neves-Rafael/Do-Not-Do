@@ -1,29 +1,28 @@
-import { Router } from "../Router.js";
-
-
-export class UserRegister{
-    inputs(){
-        const inputUserName = document.querySelector(".login input");
-        // localStorage.removeItem("user");
-        if(!inputUserName){
-            return;
-        }
-
-        document.querySelector(".login button").addEventListener("click", ()=>{
-            localStorage.setItem("user", inputUserName.value);
-        })
+export class UserRegister {
+  inputs() {
+    const inputUserName = document.querySelector(".login input");
+    // localStorage.removeItem("login");
+    console.log(inputUserName);
+    if (!inputUserName) {
+      return;
     }
 
-    verifyLogin(){
-        const router = new Router();
-        const userName = localStorage.getItem("user");
+    document.querySelector(".login button").addEventListener("click", () => {
+      localStorage.setItem("user", inputUserName.value);
+      localStorage.setItem("login", true);
+      console.log("click");
+      console.log(localStorage.getItem("login"));
+    });
+  }
 
-        // if(window.location.pathname === "/" && userName){
-        //     console.log(userName);
-        //     console.log("go to home")
-        //     window.location.pathname = "/home";
-        //     router.togglePage();
-        // }
-
+  loginPage() {
+    const registerLogin = document.querySelector(".register");
+    const loginInfo = document.querySelector(".login-info");
+    
+    if(localStorage.getItem("login") && window.location.pathname === "/") {
+      registerLogin.classList.add("hidden");
+      loginInfo.classList.remove("hidden");
+      console.log("Perfil");
     }
+  }
 }
