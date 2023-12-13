@@ -1,15 +1,41 @@
+import { Tasks } from "../tasks/UpdateTasks.js";
 export class TaskInfo {
   static search() {
+    this.infoInput();
+
+    const nameInput = document.querySelector(".input-name").value;
+    const dateInput = document.querySelector(".input-name").value;
+    const textInput = document.querySelector(".input-name").value;
     const endpoint = {
-      name: "123",
-      login: "123",
-      date: "123",
+      name: nameInput,
+      date: dateInput,
+      text: textInput,
     };
-    this.controlStyle();
-    return endpoint;
+    console.log(endpoint.name);
+    if (endpoint.name !== "") {
+      console.log("have a value");
+      return endpoint;
+    }
   }
 
-  static controlStyle() {
-      const forms = document.querySelector('');
+  static async infoInput() {
+    const infoTask = document.querySelector(".info-task");
+    const bgTemp = document.querySelector(".bg-temp");
+    infoTask.classList.remove("hidden");
+    bgTemp.classList.remove("hidden");
+
+    const confirmClickHandler = () => {
+      console.log("click");
+
+      infoTask.classList.add("hidden");
+      bgTemp.classList.add("hidden");
+      document
+        .querySelector(".confirm")
+        .removeEventListener("click", confirmClickHandler);
+    };
+
+    document
+      .querySelector(".confirm")
+      .addEventListener("click", confirmClickHandler);
   }
 }

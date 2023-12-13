@@ -11,17 +11,16 @@ export class Tasks {
     // localStorage.clear();
   }
 
-  save(){
+  save() {
     localStorage.setItem("tasks", JSON.stringify(this.entries));
   }
 
-
-  add(value){
-    const taskExists = this.entries.find(entry => entry.login === value);
-
+  add() {
     const taskBody = TaskInfo.search();
+    const taskExists = this.entries.find((entry) => entry.name === taskBody.name);
 
-    if(taskExists){
+
+    if (taskExists) {
       console.log("Task already exists");
       return;
     }
@@ -32,7 +31,7 @@ export class Tasks {
     this.save();
   }
 
-  delete(user){
+  delete(user) {
     this.entries = this.entries.filter((entry) => entry !== user);
     this.update();
     this.save();
@@ -50,10 +49,13 @@ export class TaskView extends Tasks {
   }
 
   onAdd() {
-    const addButton = this.root.querySelector(".add-task");
+    const searchButton = this.root.querySelector(".add-task");
+    const addButton = this.root.querySelector(".confirm");
+    searchButton.addEventListener("click", () => {
+      TaskInfo.search();
+    });
     addButton.addEventListener("click", () => {
-      const value = prompt("Enter task");
-      this.add(value);
+      this.add();
     })
   }
 
@@ -61,10 +63,11 @@ export class TaskView extends Tasks {
     this.removeAllTasks();
     this.entries.forEach((task) => {
       const row = this.createDiv();
-      row.querySelector("h2").textContent = task.name;
+      row.querySelector("h2").innerText = task.name;
+
       row.querySelector(".remove-task").onclick = () => {
         this.delete(task);
-      }
+      };
       this.div.append(row);
     });
   }
