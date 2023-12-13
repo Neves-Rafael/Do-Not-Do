@@ -2,7 +2,6 @@ export class UserRegister {
   inputs() {
     const inputUserName = document.querySelector(".login input");
     // localStorage.removeItem("login");
-    console.log(inputUserName);
     if (!inputUserName) {
       return;
     }

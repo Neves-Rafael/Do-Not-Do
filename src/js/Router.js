@@ -1,7 +1,7 @@
 import { UserRegister } from "./login/UserRegister.js";
 import { TaskView } from "./tasks/UpdateTasks.js";
 const userRegister = new UserRegister();
-const taskView = new TaskView();
+
 
 export class Router {
   routes = {};
@@ -21,7 +21,6 @@ export class Router {
   togglePage() {
     const { pathname } = window.location;
     const captureRoute = this.routes[pathname] || this.routes[404];
-    console.log(captureRoute);
 
     fetch(captureRoute)
       .then((data) => data.text())
@@ -29,7 +28,8 @@ export class Router {
         document.querySelector(".app").innerHTML = html;
         userRegister.inputs();
         userRegister.loginPage();
-        taskView.add();
+        const taskView = new TaskView(".app");
+        // taskView.load();
       });
   }
 }

@@ -63,6 +63,23 @@ nav ul {
   gap: 5rem;
 }
 
+
+
+.info-task {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgb(2, 70, 23);
+  z-index: 3;
+}
+
+.bg-temp {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.834);
+  inset: 0;
+  z-index: 2;
+}
+
 .hidden {
   display: none;
 }
