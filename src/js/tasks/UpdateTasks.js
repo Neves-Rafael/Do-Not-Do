@@ -17,8 +17,9 @@ export class Tasks {
 
   add() {
     const taskBody = TaskInfo.search();
-    const taskExists = this.entries.find((entry) => entry.name === taskBody.name);
-
+    const taskExists = this.entries.find(
+      (entry) => entry.name === taskBody.name
+    );
 
     if (taskExists) {
       console.log("Task already exists");
@@ -44,8 +45,11 @@ export class TaskView extends Tasks {
     super(root);
 
     this.div = this.root.querySelector(".container-task");
-    this.update();
-    this.onAdd();
+  
+    if (this.div) {
+      this.update();
+      this.onAdd();
+    }
   }
 
   onAdd() {
@@ -56,7 +60,7 @@ export class TaskView extends Tasks {
     });
     addButton.addEventListener("click", () => {
       this.add();
-    })
+    });
   }
 
   update() {
