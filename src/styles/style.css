@@ -1,13 +1,19 @@
 :root {
   font-size: 62.5%;
-  --text-color: #ffffff;
-  --header-color: #0aa46c;
+  --black: #1e1e1e;
+  --white: #f9f9f9;
+  --yellow: #f7d44c;
+  --orange: #eb7a53;
+  --blue: #98b7db;
+  --green: #89b67f;
+  --gray: #e2e2e2;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -44,9 +50,11 @@ nav ul {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  background-color: var(--white);
 }
 
-.tasks, .home {
+.tasks,
+.home {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -55,15 +63,13 @@ nav ul {
 }
 
 .tasks div {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .task-list {
   display: flex;
   gap: 5rem;
 }
-
-
 
 .info-task {
   display: flex;
@@ -82,4 +88,39 @@ nav ul {
 
 .hidden {
   display: none;
+}
+
+.user-photo {
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--yellow);
+  border-radius: 100%;
+}
+
+.username-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.username-input input {
+  border: none;
+  background-color: var(--gray);
+  height: 4rem;
+  width: 26.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 0.4rem rgba(0, 0, 0, 0.25);
+  font-size: 1.4rem;
+}
+
+.username-input input::placeholder {
+  padding-left: 2rem;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.login label {
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: 50%;
 }
