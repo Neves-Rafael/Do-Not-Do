@@ -1,19 +1,22 @@
 :root {
   font-size: 62.5%;
-  --black: #1e1e1e;
-  --white: #f9f9f9;
-  --yellow: #f7d44c;
-  --orange: #eb7a53;
-  --blue: #98b7db;
-  --green: #89b67f;
-  --gray: #e2e2e2;
+  --bg-color: #F7EFDC;
+  --text-color: #091414;
+  --red-900: #631D1F;
+  --red-500: #B10000;
+  --green-700: #215247;
+
+  --beige-900: #B0A075;
+  --beige-700: #C2BCAD;
+  --beige-500: #D5C9B1;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
