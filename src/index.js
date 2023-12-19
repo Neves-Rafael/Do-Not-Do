@@ -1,10 +1,11 @@
 import { Router } from "./js/Router.js";
 const router = new Router();
 
-router.add("/welcome", "./src/pages/welcome.html");
 router.add("/", "./src/pages/login.html");
 router.add("/home", "./src/pages/home.html");
 router.add("/tasks", "./src/pages/tasks.html");
+router.add("/welcome", "./src/pages/welcome.html");
+router.add("/profile", "./src/pages/profile.html");
 router.add(404, "./src/pages/404.html");
 
 const activeRout = document.querySelectorAll("nav a");
