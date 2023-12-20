@@ -46,7 +46,7 @@ nav ul {
   justify-content: space-around;
   position: fixed;
   bottom: 0;
-  background-color: var(--header-color);
+  background-color: var(--bg-color);
   padding: 2rem;
 }
 
