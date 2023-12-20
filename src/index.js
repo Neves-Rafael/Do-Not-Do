@@ -6,6 +6,8 @@ router.add("/home", "./src/pages/home.html");
 router.add("/tasks", "./src/pages/tasks.html");
 router.add("/welcome", "./src/pages/welcome.html");
 router.add("/profile", "./src/pages/profile.html");
+router.add("/content", "./src/pages/content.html");
+router.add("/notes", "./src/pages/notes.html");
 router.add(404, "./src/pages/404.html");
 
 const activeRout = document.querySelectorAll("nav a");
