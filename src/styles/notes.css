@@ -1,0 +1,68 @@
+.notes-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.notes-content p {
+  font-size: 1.2rem;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  background-color: var(--orange-700);
+  padding-bottom: 6.4rem;
+  z-index: 2;
+}
+
+.notes-container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  padding: 3.6rem 3.6rem 0 3.6rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.notes-content {
+  background-color: var(--orange-700);
+  border-radius: 0.8rem;
+  color: var(--bg-color);
+  padding: 1.6rem;
+  position: relative;
+}
+
+.notes-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+.add-notes-confirm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  width: 25rem;
+  border-radius: 0.8rem;
+  height: 5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: var(--orange-700);
+  color: var(--bg-color);
+  margin-top: 4rem;
+  margin-bottom: 3.6rem;
+}
+
+.container-bg {
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-color: var(--bg-color);
+  border-radius: 0.8rem 0.8rem 0 0;
+}
