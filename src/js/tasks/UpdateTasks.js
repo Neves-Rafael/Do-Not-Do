@@ -1,6 +1,6 @@
 import { TaskInfo } from "./TaskInfo.js";
 //Data manipulation
-export class Tasks {
+export class TasksUpdate {
   constructor(root) {
     this.root = document.querySelector(root);
     this.load();
@@ -8,7 +8,6 @@ export class Tasks {
 
   load() {
     this.entries = JSON.parse(localStorage.getItem("tasks")) || [];
-    // localStorage.clear();
   }
 
   save() {
@@ -16,6 +15,7 @@ export class Tasks {
   }
 
   add() {
+    console.log(this.entries)
     const taskBody = TaskInfo.search();
     const taskExists = this.entries.find(
       (entry) => entry.name === taskBody.name
@@ -40,12 +40,13 @@ export class Tasks {
 }
 
 //DOM manipulation and events
-export class TaskView extends Tasks {
+export class TaskView extends TasksUpdate {
   constructor(root) {
     super(root);
 
-    this.div = this.root.querySelector(".container-task");
-  
+    console.log(this.root);
+    this.div = this.root.querySelector(".tasks-scroll");
+
     if (this.div) {
       this.update();
       this.onAdd();
@@ -53,20 +54,22 @@ export class TaskView extends Tasks {
   }
 
   onAdd() {
-    const searchButton = this.root.querySelector(".add-task");
-    const addButton = this.root.querySelector(".confirm");
-    searchButton.addEventListener("click", () => {
+    const confirmButton = this.root.querySelector(".add-task-popup");
+
+    confirmButton.addEventListener("click", () => {
+      console.log("click");
       TaskInfo.search();
-    });
-    addButton.addEventListener("click", () => {
       this.add();
     });
   }
 
   update() {
     this.removeAllTasks();
+    console.log(this.entries)
     this.entries.forEach((task) => {
       const row = this.createDiv();
+      console.log(row)
+      console.log(task)
       row.querySelector("h2").innerText = task.name;
 
       row.querySelector(".remove-task").onclick = () => {
@@ -78,7 +81,6 @@ export class TaskView extends Tasks {
 
   createDiv() {
     const div = document.createElement("div");
-    div.classList.add("task-list");
 
     div.innerHTML = `
       <h2>task 2</h2>

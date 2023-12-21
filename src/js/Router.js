@@ -2,6 +2,7 @@ import { welcome } from "./welcome/index.js";
 import { utils } from "./utils/index.js";
 import { login } from "./login/index.js";
 import { profile } from "./profile/index.js";
+import { tasks } from "./tasks/index.js";
 
 export class Router {
   routes = {};
@@ -31,9 +32,10 @@ export class Router {
       .then((html) => {
         document.querySelector(".app").innerHTML = html;
         utils();
+        welcome();
         login();
         profile();
-        welcome();
+        tasks();
         this.selectRoute();
       });
   }
