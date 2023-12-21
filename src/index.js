@@ -1,10 +1,10 @@
 import { Router } from "./js/Router.js";
 const router = new Router();
 
+router.add("/welcome", "./src/pages/welcome.html");
 router.add("/", "./src/pages/login.html");
 router.add("/home", "./src/pages/home.html");
 router.add("/tasks", "./src/pages/tasks.html");
-router.add("/welcome", "./src/pages/welcome.html");
 router.add("/profile", "./src/pages/profile.html");
 router.add("/content", "./src/pages/content.html");
 router.add("/notes", "./src/pages/notes.html");
@@ -19,7 +19,7 @@ activeRout.forEach((element) => {
   });
 });
 
-router.verifyRoute();
+// router.verifyRoute();
 router.togglePage();
 
 window.onpopstate = () => {

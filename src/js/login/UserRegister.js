@@ -1,13 +1,15 @@
 export class UserRegister {
   inputs() {
-    const inputUserName = document.querySelector(".login input");
+    const inputUserName = document.querySelector(".login .login-username");
+    const inputEmail = document.querySelector(".login .login-email");
     // localStorage.removeItem("login");
     if (!inputUserName) {
       return;
     }
 
     document.querySelector(".login button").addEventListener("click", () => {
-      localStorage.setItem("user", inputUserName.value);
+      localStorage.setItem("user", JSON.stringify(inputUserName.value));
+      localStorage.setItem("email", JSON.stringify(inputEmail.value));
       localStorage.setItem("login", true);
       console.log("click");
       console.log(localStorage.getItem("login"));
@@ -19,7 +21,6 @@ export class UserRegister {
     const loginInfo = document.querySelector(".login-info");
     
     if(localStorage.getItem("login") && window.location.pathname === "/") {
-      registerLogin.classList.add("hidden");
       loginInfo.classList.remove("hidden");
       console.log("Perfil");
     }
