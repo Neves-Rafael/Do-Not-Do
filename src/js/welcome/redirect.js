@@ -4,9 +4,10 @@ export function redirect() {
 
   if (signIn) {
     signIn.addEventListener("click", () => {
-      window.history.pushState({}, "", "/");
+      localStorage.setItem("first", "false");
+      window.history.pushState({}, "", "/login");
       const router = new Router();
-      router.add("/", "./src/pages/login.html");
+      router.routes["/login"] = "./src/pages/login.html";
       router.togglePage();
     });
   }

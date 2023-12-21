@@ -1,8 +1,8 @@
 import { Router } from "./js/Router.js";
 const router = new Router();
 
-router.add("/welcome", "./src/pages/welcome.html");
-router.add("/", "./src/pages/login.html");
+router.add("/", "./src/pages/welcome.html");
+router.add("/login", "./src/pages/login.html");
 router.add("/home", "./src/pages/home.html");
 router.add("/tasks", "./src/pages/tasks.html");
 router.add("/profile", "./src/pages/profile.html");
@@ -19,7 +19,6 @@ activeRout.forEach((element) => {
   });
 });
 
-// router.verifyRoute();
 router.togglePage();
 
 window.onpopstate = () => {

@@ -6,34 +6,16 @@ import { profile } from "./profile/index.js";
 export class Router {
   routes = {};
 
-  // verifyRoute() {
-  //   if (window.location.pathname === "/" && localStorage.getItem("login")) {
-  //     window.history.pushState({}, "", "/home");
-  //     this.routes["/home"] = "./src/pages/home.html";
-  //     this.togglePage();
-  //   }
-  // }
 
   selectRoute() {
     // Refactor
     console.log(localStorage.getItem("login"));
     console.log(localStorage.getItem("first"));
 
-    if(localStorage.getItem("first") === "true"){
-      window.history.pushState({}, "", "/");
-      this.routes["/"] = "./src/pages/login.html";
+    if(localStorage.getItem("first") === "false" && window.location.pathname === "/"){
+      window.location.href = "/login";
     }
 
-    if (localStorage.getItem("login")) {
-      window.history.pushState({}, "", "/home");
-      this.routes["/home"] = "./src/pages/home.html";
-    } else if (localStorage.getItem("first") !== "true") {
-      localStorage.setItem("first", "true");
-      window.history.pushState({}, "", "/welcome");
-      this.routes["/welcome"] = "./src/pages/welcome.html";
-      welcome();
-    }
-    localStorage.removeItem("first");
   }
 
   add(pathName, page) {
@@ -51,6 +33,7 @@ export class Router {
         utils();
         login();
         profile();
+        welcome();
         this.selectRoute();
       });
   }
