@@ -1,3 +1,4 @@
+import { Router } from "../Router.js";
 export class UserRegister {
   inputs() {
     const inputUserName = document.querySelector(".login .login-username");
@@ -17,8 +18,16 @@ export class UserRegister {
   }
 
   loginPage() {
-    const registerLogin = document.querySelector(".register");
     const loginInfo = document.querySelector(".login-info");
+    const buttonConfirm = document.querySelector(".login-button button");
+    if (buttonConfirm) {
+      const router = new Router();
+      buttonConfirm.addEventListener("click", () => {
+        window.history.pushState({}, "", "/home");
+        router.routes["/home"] = "./src/pages/home.html";
+        router.togglePage();
+      })
+    }
     
     if(localStorage.getItem("login") && window.location.pathname === "/") {
       loginInfo.classList.remove("hidden");

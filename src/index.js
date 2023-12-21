@@ -27,3 +27,5 @@ window.onpopstate = () => {
 };
 
 window.route = () => router.togglePage();
+
+// localStorage.clear();
