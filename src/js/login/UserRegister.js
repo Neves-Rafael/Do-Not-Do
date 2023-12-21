@@ -18,7 +18,6 @@ export class UserRegister {
   }
 
   loginPage() {
-    const loginInfo = document.querySelector(".login-info");
     const buttonConfirm = document.querySelector(".login-button button");
     if (buttonConfirm) {
       const router = new Router();
@@ -29,9 +28,5 @@ export class UserRegister {
       })
     }
     
-    if(localStorage.getItem("login") && window.location.pathname === "/") {
-      loginInfo.classList.remove("hidden");
-      console.log("Perfil");
-    }
   }
 }
