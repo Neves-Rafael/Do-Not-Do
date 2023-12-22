@@ -7,12 +7,12 @@ export class NotesUpdate {
   }
 
   load() {
-    this.entries = JSON.parse(localStorage.getItem("tasks")) || [];
+    this.entries = JSON.parse(localStorage.getItem("notes")) || [];
 
   }
 
   save() {
-    localStorage.setItem("tasks", JSON.stringify(this.entries));
+    localStorage.setItem("notes", JSON.stringify(this.entries));
   }
 
   add(returnSearch) {
