@@ -27,6 +27,11 @@
   padding: 3rem 2rem 8rem;
 }
 
+.tasks-container h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
 .tasks-scroll {
   max-height: 25rem;
   overflow-y: auto;

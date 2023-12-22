@@ -8,32 +8,32 @@ export class TasksUpdate {
 
   load() {
     this.entries = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    // this.entries = [{
+    //   name: "task 1",
+    //   date: "2020-01-01",
+    // },
+    // {
+    //   name: "task 3",
+    //   date: "2020-01-02",
+    // }]
   }
 
   save() {
     localStorage.setItem("tasks", JSON.stringify(this.entries));
   }
 
-  add() {
-    console.log(this.entries)
-    const taskBody = TaskInfo.search();
-    const taskExists = this.entries.find(
-      (entry) => entry.name === taskBody.name
-    );
+  add(returnSearch) {
+    console.log(this.entries);
+    const taskBody = returnSearch;
 
-    if (taskExists) {
-      console.log("Task already exists");
-      return;
-    }
-
-    console.log(taskBody);
     this.entries = [...this.entries, taskBody];
     this.update();
     this.save();
   }
 
-  delete(user) {
-    this.entries = this.entries.filter((entry) => entry !== user);
+  delete(task) {
+    this.entries = this.entries.filter((entry) => entry !== task);
     this.update();
     this.save();
   }
@@ -44,7 +44,6 @@ export class TaskView extends TasksUpdate {
   constructor(root) {
     super(root);
 
-    console.log(this.root);
     this.div = this.root.querySelector(".tasks-scroll");
 
     if (this.div) {
@@ -54,12 +53,17 @@ export class TaskView extends TasksUpdate {
   }
 
   onAdd() {
-    const confirmButton = this.root.querySelector(".add-task-popup");
+    const buttonPopUp = this.root.querySelector(".add-task-popup");
+    const confirmButton = this.root.querySelector(".add-task-confirm");
+
+    buttonPopUp.addEventListener("click", () => {
+      TaskInfo.infoInput();
+    });
 
     confirmButton.addEventListener("click", () => {
-      console.log("click");
-      TaskInfo.search();
-      this.add();
+      console.log("confirm");
+      const returnSearch = TaskInfo.search();
+      this.add(returnSearch);
     });
   }
 
@@ -68,8 +72,12 @@ export class TaskView extends TasksUpdate {
     console.log(this.entries)
     this.entries.forEach((task) => {
       const row = this.createDiv();
-      console.log(row)
-      console.log(task)
+      if(task === undefined || null){
+        this.delete(task);
+        return
+      }
+
+      console.log(task);
       row.querySelector("h2").innerText = task.name;
 
       row.querySelector(".remove-task").onclick = () => {
@@ -81,6 +89,7 @@ export class TaskView extends TasksUpdate {
 
   createDiv() {
     const div = document.createElement("div");
+    div.classList.add("task-list");
 
     div.innerHTML = `
       <h2>task 2</h2>
