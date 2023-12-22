@@ -1,6 +1,5 @@
-
 export class TaskInfo {
-  static search() {
+  static searchTask() {
 
     const nameInput = document.querySelector(".input-name").value;
     const dateInput = document.querySelector(".input-email").value;
@@ -10,7 +9,7 @@ export class TaskInfo {
       date: "teste2",
       text: "teste3",
     };
-    this.infoInput();
+    this.infoInputTask();
     console.log(endpoint.name);
     if (endpoint.name !== "") {
       console.log("have a value");
@@ -18,7 +17,7 @@ export class TaskInfo {
     }
   }
 
-  static async infoInput() {
+  static infoInputTask() {
     const toggleContentInput = document.querySelector(".info-task");
     const taskToggleContent = document.querySelector(".tasks-container");
     const bgToggleContent = document.querySelector(".bg-cover-confirm");

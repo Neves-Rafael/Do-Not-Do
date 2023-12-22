@@ -9,14 +9,6 @@ export class TasksUpdate {
   load() {
     this.entries = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    // this.entries = [{
-    //   name: "task 1",
-    //   date: "2020-01-01",
-    // },
-    // {
-    //   name: "task 3",
-    //   date: "2020-01-02",
-    // }]
   }
 
   save() {
@@ -24,7 +16,6 @@ export class TasksUpdate {
   }
 
   add(returnSearch) {
-    console.log(this.entries);
     const taskBody = returnSearch;
 
     this.entries = [...this.entries, taskBody];
@@ -57,29 +48,27 @@ export class TaskView extends TasksUpdate {
     const confirmButton = this.root.querySelector(".add-task-confirm");
 
     buttonPopUp.addEventListener("click", () => {
-      TaskInfo.infoInput();
+      TaskInfo.infoInputTask();
     });
 
     confirmButton.addEventListener("click", () => {
-      console.log("confirm");
-      const returnSearch = TaskInfo.search();
+      const returnSearch = TaskInfo.searchTask();
       this.add(returnSearch);
     });
   }
 
   update() {
     this.removeAllTasks();
-    console.log(this.entries)
+
     this.entries.forEach((task) => {
       const row = this.createDiv();
-      if(task === undefined || null){
+      if(!task ){
         this.delete(task);
         return
       }
 
-      console.log(task);
       row.querySelector("h2").innerText = task.name;
-
+      console.log("cliquei pra deletar task")
       row.querySelector(".remove-task").onclick = () => {
         this.delete(task);
       };

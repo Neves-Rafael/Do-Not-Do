@@ -3,6 +3,7 @@ import { utils } from "./utils/index.js";
 import { login } from "./login/index.js";
 import { profile } from "./profile/index.js";
 import { tasks } from "./tasks/index.js";
+import { notes } from "./notes/index.js";
 
 export class Router {
   routes = {};
@@ -35,6 +36,7 @@ export class Router {
         welcome();
         login();
         profile();
+        notes();
         tasks();
         this.selectRoute();
       });
