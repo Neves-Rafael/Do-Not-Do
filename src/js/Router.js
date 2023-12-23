@@ -4,6 +4,7 @@ import { login } from "./login/index.js";
 import { profile } from "./profile/index.js";
 import { tasks } from "./tasks/index.js";
 import { notes } from "./notes/index.js";
+import { home } from "./home/index.js";
 
 export class Router {
   routes = {};
@@ -33,11 +34,21 @@ export class Router {
       .then((html) => {
         document.querySelector(".app").innerHTML = html;
         utils();
-        welcome();
-        login();
-        profile();
-        notes();
-        tasks();
+        switch (pathname) {
+          case "/": welcome();
+            break;
+          case "/login": login();
+            break;
+          case "/profile": profile();
+            break;
+          case "/tasks": tasks();
+            break;
+          case "/notes": notes();
+            break;
+          case "/home": home();
+            break;
+            
+        }
         this.selectRoute();
       });
   }
