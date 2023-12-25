@@ -1,18 +1,16 @@
 export class NoteInfo {
   static searchNote() {
     const nameInput = document.querySelector(".input-note-name").value;
-    const dateInput = document.querySelector(".input-note-date").value;
-    const textInput = document.querySelector(".input-note-description").value;
+    const objectiveInput = document.querySelector(".input-note-date").value;
+    const descriptionInput = document.querySelector(".input-note-description").value;
     
     const endpoint = {
       name: nameInput,
-      date: "teste2",
-      text: "teste3",
+      objective: objectiveInput,
+      description: descriptionInput,
     };
     this.infoInputNote();
-    console.log(endpoint.name);
     if (endpoint.name !== "") {
-      console.log("have a value");
       return endpoint;
     }
   }
@@ -27,7 +25,6 @@ export class NoteInfo {
     bgToggleContent.classList.toggle("hidden");
 
     const returnToggle = document.querySelector(".add-notes-confirm");
-    console.log(returnToggle)
     const toggleElements = () => {
       noteToggleContent.classList.toggle("hidden");
       toggleContentInput.classList.toggle("hidden");

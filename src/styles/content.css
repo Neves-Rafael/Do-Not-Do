@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+
 }
 
 .content-container {
@@ -12,8 +13,9 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
+  padding-bottom: 7.4rem;
+  margin-bottom: 2rem;
 }
 
 .content-info {
