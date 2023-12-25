@@ -10,14 +10,28 @@ router.add("/content", "./src/pages/content.html");
 router.add("/notes", "./src/pages/notes.html");
 router.add(404, "./src/pages/404.html");
 
-const activeRout = document.querySelectorAll("nav a");
+// const activeRout = document.querySelectorAll("nav a");
+// activeRout.forEach((element) => {
+//   element.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     window.history.pushState({}, "", event.target.href);
+//     router.togglePage();
+//   });
+// });
+
+const activeRout = document.querySelectorAll("nav ul li a img");
+
 activeRout.forEach((element) => {
+  //refactor
   element.addEventListener("click", (event) => {
+
+    // console.log(event.parentElement.getAttribute("href"))
     event.preventDefault();
-    window.history.pushState({}, "", event.target.href);
+    window.history.pushState({}, "", event.currentTarget.parentElement.href);
     router.togglePage();
   });
 });
+
 
 router.togglePage();
 

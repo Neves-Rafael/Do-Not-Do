@@ -68,8 +68,7 @@ export class NoteView extends NotesUpdate {
       }
 
       row.querySelector("h2").innerText = note.name;
-      console.log("cliquei pra deletar task")
-      row.querySelector(".remove-task").onclick = () => {
+      row.querySelector(".remove-notes").onclick = () => {
         this.delete(note);
       };
       this.div.append(row);
@@ -78,17 +77,17 @@ export class NoteView extends NotesUpdate {
 
   createDiv() {
     const div = document.createElement("div");
-    div.classList.add("notes-container");
+    div.classList.add("note-list");
 
     div.innerHTML = `
       <h2>task 2</h2>
-      <button class="remove-task">x</button
+      <button class="remove-notes"><img src="src/assets/exit.svg" alt="" /></button
     `;
     return div;
   }
 
   removeAllNotes() {
-    this.div.querySelectorAll(".notes-container").forEach((note) => {
+    this.div.querySelectorAll(".note-list").forEach((note) => {
       note.remove();
     });
   }

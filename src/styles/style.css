@@ -42,7 +42,7 @@ nav ul {
   width: 100%;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
   background-color: var(--bg-color);

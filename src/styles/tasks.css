@@ -19,12 +19,14 @@
 .tasks-container {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
   max-height: 50rem;
   width: 100%;
   background-color: var(--bg-color);
   border-radius: 1rem 1rem 0 0;
-  padding: 3rem 2rem 8rem;
+  padding: 2rem 2rem 0;
+  margin-bottom: 7.4rem;
 }
 
 .tasks-container h2 {
@@ -41,18 +43,18 @@
   gap: 2rem;
 }
 
-.tasks-scroll div {
+.task-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
   min-height: 5rem;
-  width: 30rem;
+  width: 33rem;
   background-color: var(--beige-500);
   border-radius: 0.8rem;
 }
 
-.tasks-container button,
+.tasks-container .add-task-popup,
 .add-task-confirm {
   display: flex;
   align-items: center;
@@ -130,4 +132,10 @@
   right: 0;
 
   background-color: var(--text-color);
+}
+
+.remove-task {
+  display: flex;
+  cursor: pointer;
+  background: none;
 }

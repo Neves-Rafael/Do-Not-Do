@@ -68,7 +68,6 @@ export class TaskView extends TasksUpdate {
       }
 
       row.querySelector("h2").innerText = task.name;
-      console.log("cliquei pra deletar task")
       row.querySelector(".remove-task").onclick = () => {
         this.delete(task);
       };
@@ -82,7 +81,7 @@ export class TaskView extends TasksUpdate {
 
     div.innerHTML = `
       <h2>task 2</h2>
-      <button class="remove-task">x</button
+      <button class="remove-task"><img src="src/assets/exit.svg" alt="" /></button
     `;
     return div;
   }

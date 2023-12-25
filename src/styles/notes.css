@@ -14,7 +14,7 @@
   align-items: center;
   height: 100%;
   background-color: var(--orange-700);
-  padding-bottom: 6.4rem;
+  padding-bottom: 7.4rem;
   z-index: 2;
 }
 
@@ -106,5 +106,16 @@
   flex-direction: column;
   height: 40rem;
   background-color: var(--green-700);
+  border-radius: 0.8rem;
+}
+
+.note-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  min-height: 5rem;
+  width: 33rem;
+  background-color: var(--beige-500);
   border-radius: 0.8rem;
 }
