@@ -1,15 +1,11 @@
-<h1 align="center">⏲️ Relax Focus Timer</h1>
+<h1 align="center">🎯 Do Not Do</h1>
 
-![image](https://github.com/Neves-Rafael/Focus-timer/assets/136202919/70b79411-9555-4b9d-ae16-1bb05dc1ab94)
+![image](https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/6809e9d9-cf67-4dad-ab15-5d001b9d3bf5)
 
 
-<p align="center">⏲️Focus Timer - É uma forma de marca o tempo para que se mantenha focado nos estudos ou em outras tarefas que necessitam de concentração! É possível adiicionar 4 trilhas sonoras e videos relaxantes para tocar de fundo tendo sua experiência 100% personalizada!</p>
+<p align="center">🎯Do Not Do - É uma ToDo-List com opção de adicionar notas e tasks para que fique mais fácil de lembrar e concluir suas tarefas! Possui também uma seção com conteúdos de auxilio para que complete com mais facilidade seus objetivos! Atualmente conta com o armazenamento Local!</p>
 <br/>
 <br/>
-<p align="center">Projeto desenvolvido durante o curso <strong>Explorer</strong> oferecida pela <a href="https://app.rocketseat.com.br/">RocketSeat</a>.<br/>
-O Explorer é uma experiência online com muito conteúdo prático e desafios.</p>
-<br/>
-
 
 
 
