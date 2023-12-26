@@ -38,7 +38,7 @@
 </p>
 
 
-<h2 align="center">🎨 Design</h2>
+<h1 align="center">🎨 Design</h1>
 <br/>
 
 <h3 align="center">🖌️ Todo o Layout Desenvolvido atravéz do Figma!</h3>
