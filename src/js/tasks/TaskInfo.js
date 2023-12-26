@@ -2,15 +2,16 @@ export class TaskInfo {
   static searchTask() {
 
     const nameInput = document.querySelector(".input-name").value;
-    const dateInput = document.querySelector(".input-email").value;
-    const textInput = document.querySelector(".input-description").value;
+    const objectiveInput = document.querySelector(".input-objective").value;
+    const descriptionInput = document.querySelector(".input-description").value;
     const endpoint = {
       name: nameInput,
-      date: "teste2",
-      text: "teste3",
+      objective: objectiveInput,
+      description: descriptionInput,
     };
+
     this.infoInputTask();
-    console.log(endpoint.name);
+
     if (endpoint.name !== "") {
       console.log("have a value");
       return endpoint;

@@ -31,7 +31,12 @@ export class HomeView extends Content {
     this.entriesNote.forEach((note) => {
       const rowNote = this.createDivNote();
       rowNote.querySelector("h2").innerText = note.name;
-      console.log("create note div");
+
+      console.log(note.description)
+      note.description
+        ? (rowNote.querySelector(".note-description").innerText = note.description)
+        : (rowNote.querySelector(".note-description").innerText = "");
+
       this.noteContent.append(rowNote);
     });
   }
@@ -42,7 +47,7 @@ export class HomeView extends Content {
 
     div.innerHTML = `
         <h2>Book for read</h2>
-        <p>
+        <p class="note-description">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s.
@@ -51,15 +56,22 @@ export class HomeView extends Content {
     return div;
   }
 
-  updateTask(){
-    // this.removeAllContent();
+  updateTask() {
     this.entriesTask.forEach((task) => {
-        const rowTask = this.createDivTask();
-        rowTask.querySelector("h2").innerText = task.name;
-        console.log("create task div");
-        this.taskContent.append(rowTask);
+      const rowTask = this.createDivTask();
+      rowTask.querySelector("h2").innerText = task.name;
+
+      task.description
+        ? (rowTask.querySelector(".task-description").innerText = task.description)
+        : (rowTask.querySelector(".task-description").innerText = "");
+
+        task.objective
+        ? (rowTask.querySelector(".task-objective").innerText = task.objective)
+        : (rowTask.querySelector(".task-objective").innerText = "");
+
+      this.taskContent.append(rowTask);
     });
-  };
+  }
 
   createDivTask() {
     const div = document.createElement("div");
@@ -67,22 +79,27 @@ export class HomeView extends Content {
 
     div.innerHTML = `
     <h2>Book for read</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
-        </p>
-    `
+    <p class="task-description">
+    Lorem Ipsum is simply dummy text of the printing and typesetting
+    industry. Lorem Ipsum has been the industry's standard dummy text ever
+    since the 1500s.
+    </p>
+    <p class="task-objective"></p>
+    `;
     return div;
   }
 
   removeAllContent() {
-    this.noteContent.querySelectorAll(".home-top-section-note").forEach((note) => {
+    this.noteContent
+      .querySelectorAll(".home-top-section-note")
+      .forEach((note) => {
         note.remove();
-    });
+      });
 
-    this.taskContent.querySelectorAll(".home-bottom-section-note").forEach((task)=> {
+    this.taskContent
+      .querySelectorAll(".home-bottom-section-note")
+      .forEach((task) => {
         task.remove();
-    })
+      });
   }
 }

@@ -5,10 +5,3 @@
 .active path {
   fill: var(--red-500);
 }
-
-.active{
-  border-radius: 25%;
-  box-shadow: 
-    0 0 10px 5px #b100004e, /* Sombra brilhante para fora */
-    inset 0 0 10px 5px #b100004e; /* Sombra brilhante para dentro */
-}

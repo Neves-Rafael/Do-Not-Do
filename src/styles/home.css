@@ -23,7 +23,8 @@
   height: 16rem;
   min-width: 20rem;
   background-color: var(--orange-700);
-  padding: 0.5rem;
+  padding: 1rem;
+  overflow-y: auto;
 }
 
 .home-top-section div h2 {
@@ -47,23 +48,29 @@
 }
 
 .home-bottom-section :last-child {
-  margin-bottom: 2rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
 .home-bottom-section-note {
   border-radius: 0.8rem;
-  height: 15rem;
+  max-height: 15rem;
   background-color: var(--bg-color);
   padding: 2rem;
 }
 
 .home-bottom-section-note h2 {
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .home-bottom-section-note p {
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.task-description{
+  font-weight: 700;
 }
