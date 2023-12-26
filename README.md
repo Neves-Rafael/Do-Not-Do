@@ -1,6 +1,10 @@
 <h1 align="center">🎯 Do Not Do</h1>
 
 ![image](https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/6809e9d9-cf67-4dad-ab15-5d001b9d3bf5)
+![image](https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/ba2e2d31-5e68-4f55-859a-f8aac30f7be6)
+![image](https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/f08c549f-e423-40c1-8ac6-2afe370644d3)
+
+
 
 
 <p align="center">🎯Do Not Do - É uma ToDo-List com opção de adicionar notas e tasks para que fique mais fácil de lembrar e concluir suas tarefas! Possui também uma seção com conteúdos de auxilio para que complete com mais facilidade seus objetivos! Atualmente conta com o armazenamento Local!</p>
