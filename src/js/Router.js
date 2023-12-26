@@ -46,8 +46,7 @@ export class Router {
           case "/notes": notes();
             break;
           case "/home": home();
-            break;
-            
+            break;  
         }
         this.selectRoute();
       });

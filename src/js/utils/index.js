@@ -1,7 +1,13 @@
-import { adjustMenu } from "./adjustMenu.js";
-import { settingsMenu } from "./settings.js";
-export function utils(){
-    console.log("utils")
-    settingsMenu();
-    adjustMenu();
+import {
+  adjustMenu,
+  settingsMenu,
+  showActualPage,
+  adjustUserInformation,
+} from "./adjustMenu.js";
+export function utils() {
+  console.log("utils");
+  showActualPage();
+  settingsMenu();
+  adjustMenu();
+  adjustUserInformation();
 }

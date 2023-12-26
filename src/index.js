@@ -19,7 +19,7 @@ router.add(404, "./src/pages/404.html");
 //   });
 // });
 
-const activeRout = document.querySelectorAll("nav ul li a img");
+const activeRout = document.querySelectorAll("nav ul li a svg");
 
 activeRout.forEach((element) => {
   //refactor
