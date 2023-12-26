@@ -10,32 +10,44 @@
 
 
 
-<p align="center">🎯Do Not Do - É uma ToDo-List com opção de adicionar notas e tasks para que fique mais fácil de lembrar e concluir suas tarefas! Possui também uma seção com conteúdos de auxilio para que complete com mais facilidade seus objetivos! Atualmente conta com o armazenamento Local!</p>
+<p align="center">🎯Do Not Do - É uma ToDo-List com opção de adicionar notas e tasks para que fique mais fácil de lembrar e concluir suas tarefas! Possui uma seção com conteúdos de auxilio para que complete com mais facilidade seus objetivos! Atualmente conta com o armazenamento Local!</p>
 <br/>
 <br/>
 
-
+<p align="center">🚧 Projeto ainda Em contrução</p>
+<p align="center">(Princípais funcionalidades já estão prontas!)</p>
+<br/>
+<br/>
 
 <h1 align="center">⚙️Funcionalidades</h1>
 
 
-<h3 align="center">⭐ Escolher entre 4 temas (estações do ano)</h3>
+<h3 align="center">⭐ Adição de tasks!</h3>
 
 <p align="center">
   <img width="700px" src="https://github.com/Neves-Rafael/Focus-timer/assets/136202919/9cccf2d7-a7bb-4381-8374-535609bcdcf9">
 </p>
 
-
-<h3 align="center">⭐ Reproduzir ou não um Vídeo de fundo</h3>
+<h3 align="center">⭐ Adição de Notas!</h3>
 <p align="center">
   <img width="700px" src="https://github.com/Neves-Rafael/Focus-timer/assets/136202919/d685626d-3f14-41e7-8808-4a269c2624b5" >
 </p>
 
-<h3 align="center">⭐ Alterar o Timer como desejar</h3>
+<h3 align="center">⭐ Conteúdo de auxílio!</h3>
 <p align="center">
   <img width="700px" src="https://github.com/Neves-Rafael/Focus-timer/assets/136202919/c79d3ca6-f9e6-47b4-a809-7f33154f94da">
 </p>
 
+
+<h2 align="center">🎨 Design</h2>
+<br/>
+
+<h3 align="center">🖌️ Todo o Layout Desenvolvido atravéz do Figma!</h3>
+<p align="center">Link Para o Figma!</p>
+
+<p align="center">
+  <img width="700px" src="https://github.com/Neves-Rafael/Focus-timer/assets/136202919/c79d3ca6-f9e6-47b4-a809-7f33154f94da">
+</p>
 
 <h2 align="center">🧱 Pré-requisitos</h2>
 <br/>
@@ -51,7 +63,7 @@ Além disto é bom ter um editor para trabalhar com o código como <a href="http
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/Neves-Rafael/Focus-timer
+$ git clone https://github.com/Neves-Rafael/Do-Not-Do
 
 # Execute em qualquer navegador
 ```
@@ -66,7 +78,7 @@ $ git clone https://github.com/Neves-Rafael/Focus-timer
 <br/>  
 JavaScript - CSS - HTML
 <br/>
-Phosphor (Icones) - Pexels (videos) - Chosic (Músicas)</p>
+LiteServer - Figma 
 <br/>
 <br/>
 
