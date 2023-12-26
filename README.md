@@ -1,9 +1,9 @@
 <h1 align="center">🎯 Do Not Do</h1>
 
 
-<img width="700px" src="https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/6809e9d9-cf67-4dad-ab15-5d001b9d3bf5">
-<img width="700px" src="https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/ba2e2d31-5e68-4f55-859a-f8aac30f7be6">
-<img width="700px" src="https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/1049ca8a-5dd7-4db5-8c87-cffc7692f1a6">
+<img width="300px" src="https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/6809e9d9-cf67-4dad-ab15-5d001b9d3bf5">
+<img width="300px" src="https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/ba2e2d31-5e68-4f55-859a-f8aac30f7be6">
+<img width="300px" src="https://github.com/Neves-Rafael/Do-Not-Do/assets/136202919/1049ca8a-5dd7-4db5-8c87-cffc7692f1a6">
 
 
 
