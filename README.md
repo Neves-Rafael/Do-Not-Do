@@ -13,7 +13,8 @@
 <br/>
 <br/>
 
-<p align="center">🚧 Projeto ainda Em contrução</p>
+<h3 align="center">🚧 Projeto ainda Em contrução</h3>
+<p align="center">(Disponível apenas versão Mobile!)</p>
 <p align="center">(Princípais funcionalidades já estão prontas!)</p>
 <br/>
 <br/>
