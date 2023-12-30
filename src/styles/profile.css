@@ -6,6 +6,12 @@
   justify-content: space-evenly;
 }
 
+/* .profile-img{
+  width: 35rem;
+  height: 35rem;
+  object-fit: cover;
+} */
+
 .profile-info {
   display: flex;
   flex-direction: column;
@@ -20,4 +26,30 @@
 .profile-info p {
   color: var(--red-900);
 }
+
+.user-photo {
+  position: relative;
+}
+
+.avatar-container {
+
+  display: inline-block;
+  position: absolute;
+  right: .5rem;
+  bottom: .5rem;
+  cursor: pointer;
+  padding: .2rem .4rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.avatar-container img {
+  width: 2rem; 
+  height: 2rem; 
+}
+
+.inputCustom {
+  display: none; 
+}
+
 
