@@ -8,6 +8,11 @@ export class UserRegister {
       return;
     }
 
+    this.loginButton();
+    this.getImgUser();
+  }
+
+  loginButton() {
     document.querySelector(".login button").addEventListener("click", () => {
       localStorage.setItem("user", JSON.stringify(inputUserName.value));
       localStorage.setItem("email", JSON.stringify(inputEmail.value));
@@ -15,7 +20,9 @@ export class UserRegister {
       console.log("click");
       console.log(localStorage.getItem("login"));
     });
+  }
 
+  getImgUser() {
     document
       .querySelector(".avatar-container")
       .addEventListener("change", () => {
@@ -26,7 +33,7 @@ export class UserRegister {
           const reader = new FileReader();
           reader.onload = (e) => {
             const imageBase64 = e.target.result;
-            console.log(imageBase64)
+            console.log(imageBase64);
             localStorage.setItem("profileImg", imageBase64);
           };
           reader.readAsDataURL(file);
