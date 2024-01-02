@@ -15,6 +15,23 @@ export class UserRegister {
       console.log("click");
       console.log(localStorage.getItem("login"));
     });
+
+    document
+      .querySelector(".avatar-container")
+      .addEventListener("change", () => {
+        const fileInput = event.target;
+        const file = fileInput.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const imageBase64 = e.target.result;
+            console.log(imageBase64)
+            localStorage.setItem("profileImg", imageBase64);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
   }
 
   loginPage() {
@@ -25,8 +42,7 @@ export class UserRegister {
         window.history.pushState({}, "", "/home");
         router.routes["/home"] = "./src/pages/home.html";
         router.togglePage();
-      })
+      });
     }
-    
   }
 }
