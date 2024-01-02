@@ -80,3 +80,15 @@ export function showActualPage() {
       break;
   }
 }
+
+export function changeHeaderImg(){
+  const teste = document.querySelector(".header-img-user");
+  const profileImg = localStorage.getItem("profileImg");
+
+  teste.src = profileImg;
+
+  if (profileImg) {
+    console.log("profileImg");
+  }
+
+}

@@ -7,14 +7,14 @@ export class UserRegister {
     if (!inputUserName) {
       return;
     }
-
-    this.loginButton();
+    
+    this.loginButton(inputUserName, inputEmail);
     this.getImgUser();
   }
 
-  loginButton() {
+  loginButton(inputUser, inputEmail) {
     document.querySelector(".login button").addEventListener("click", () => {
-      localStorage.setItem("user", JSON.stringify(inputUserName.value));
+      localStorage.setItem("user", JSON.stringify(inputUser.value));
       localStorage.setItem("email", JSON.stringify(inputEmail.value));
       localStorage.setItem("login", true);
       console.log("click");

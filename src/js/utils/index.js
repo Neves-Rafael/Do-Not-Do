@@ -3,6 +3,7 @@ import {
   settingsMenu,
   showActualPage,
   adjustUserInformation,
+  changeHeaderImg
 } from "./adjustMenu.js";
 export function utils() {
   console.log("utils");
@@ -10,4 +11,5 @@ export function utils() {
   settingsMenu();
   adjustMenu();
   adjustUserInformation();
+  changeHeaderImg();
 }
